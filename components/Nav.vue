@@ -36,18 +36,7 @@
           </div>
           <div class="LOGO w-32 px-4"><img src="~/assets/logo.png" alt="" /></div>
           <div class="CART-ICON px-10">
-            <svg
-              width="22"
-              height="29"
-              viewBox="0 0 22 29"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2.44444 28.5H19.5556C20.9037 28.5 22 27.2442 22 25.7V10.3C22 9.9287 21.8712 9.5726 21.642 9.31005C21.4128 9.0475 21.1019 8.9 20.7778 8.9H17.1111V7.5C17.1111 3.6402 14.3697 0.5 11 0.5C7.63033 0.5 4.88889 3.6402 4.88889 7.5V8.9H1.22222C0.898069 8.9 0.587192 9.0475 0.357981 9.31005C0.128769 9.5726 0 9.9287 0 10.3V25.7C0 27.2442 1.09633 28.5 2.44444 28.5ZM7.33333 7.5C7.33333 5.1844 8.97844 3.3 11 3.3C13.0216 3.3 14.6667 5.1844 14.6667 7.5V8.9H7.33333V7.5ZM2.44444 11.7H4.88889V14.5H7.33333V11.7H14.6667V14.5H17.1111V11.7H19.5556L19.558 25.7H2.44444V11.7Z"
-                fill="black"
-              />
-            </svg>
+            <IconsBasketIcon />
           </div>
         </div>
         <div
@@ -73,17 +62,51 @@
         </div>
       </section>
 
-      <ul class="DESKTOP-MENU hidden space-x-8 sm:flex">
+      <section class="DESKTOP-MENU hidden sm:flex justify-between items-center px-8 py-2">
+        <div class="LOGO w-32"><img src="~/assets/logo.png" alt="" /></div>
+        <div class="SEARCH border-2 p-1 rounded-md">
+          <form action="" class="flex divide-x-2 items-center">
+            <fieldset class="px-2">
+              <select name="categories" id="categories">
+              <option value="All Categories">All Categories</option>
+              <option value="Dresses">Dresses</option>
+              <option value="Shirts">Shirts</option>
+              <option value="Hats">Hats</option>
+              <option value="Shoes">Shoes</option>
+              <option value="Belts">Belts</option>
+            </select>
+            </fieldset>
+            <fieldset class="px-2 flex items-center">
+              <input type="text" placeholder="Search in ..." class="">
+            <button type="submit" class="">
+              <span class="ICON flex wrap">
+                <IconsLensIcon />
+              </span>
+            </button>
+            </fieldset>
+          </form>
+        </div>
+        <ul class="space-x-8 flex">
         <li>
-          <a href="/about">About</a>
+          <a href="/wishlist" class="flex flex-col justify-center items-center">
+            <IconsHeartIcon />
+            <span>Wishlist</span>
+          </a>
         </li>
         <li>
-          <a href="/portfolio">Portfolio</a>
+          <a href="/compare"  class="flex flex-col justify-center items-center">
+            <IconsBalanceIcon />
+            <span>Compare</span>
+          </a>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <a href="/cart"  class="flex flex-col justify-center items-center">
+            <IconsBasketIcon />
+            <span>Cart</span>
+          </a>
         </li>
       </ul>
+      </section>
     </nav>
   </div>
 </template>
@@ -125,5 +148,16 @@ export default {
 .cartCount {
   background: #000;
   border-radius: 30%;
+}
+.SEARCH {
+  border-color: #9A031E;
+}
+
+.DESKTOP-MENU {
+  background-color: #fff;
+}
+
+input:focus, textarea:focus, select:focus{
+        outline: none;
 }
 </style>

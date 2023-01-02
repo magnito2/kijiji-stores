@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col mt-10 sm:mt-0 sm:flex-row bg-slate-400 sm:mx-20 sm:justify-between space-x-5 p-5 py-8 md:space-x-20 md:p-20 text-sm"
+    class="footer flex flex-col mt-10 sm:mt-0 sm:flex-row sm:mx-20 sm:justify-between space-x-5 p-5 py-8 md:space-x-20 md:p-20 text-sm"
   >
     <div class="flex flex-col">
       <img class="w-32 mb-2" src="~/assets/logo.png" alt="logo" />
@@ -96,4 +96,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.footer {
+  background: #d9d9d9;
+}
+</style>

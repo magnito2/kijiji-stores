@@ -1,24 +1,25 @@
 <template>
   <div
-    class="hero relative max-h-screen flex flex-col justify-center items-center text-center mx-auto bg-cover"
+    class="hero relative h-96 flex flex-col justify-center items-center text-center mx-auto"
   >
-    <div class="relative m-10 md:m-20">
-      <div class="relative">
-        <img class="absolute left-0 top-0" src="Repeat_Grid_2.png" alt="" />
-      </div>
+    <div class="absolute h-full min-w-full flex top-0 left-48">
+        <img class="absolute left-0 top-0 h-full" src="~/assets/hero.png" alt="" />
+    </div>
+    <div class="relative">
       <div class="z-10 relative">
-        <h1 class="text-5xl text-white m-3 font-bold md:text-6xl">
-          Unique Essence Store
+        <h1 class="text-5xl m-3 font-bold md:text-6xl">
+          Home of African Fashion
         </h1>
-        <p class="text-white subtitle">...your one stop shop for all</p>
-      </div>
-      <div class="circle absolute z-0 right-0 top-0"></div>
-      <div class="links mt-10">
-        <NuxtLink to="/" class="button--hero bg-button relative z-10">
-          View Collections
-        </NuxtLink>
+        <p class="subtitle">...quality and affordable products</p>
       </div>
     </div>
+    <div class="links mt-10 absolute right-32 bottom-16">
+        <NuxtLink to="/" class="button--hero relative z-10 text-xl">
+          <span>View Collections</span>
+          <span><IconsArrowRightIcon /></span>
+        </NuxtLink>
+    </div>
+    <div class="circle absolute z-0 right-16 top-16"></div>
   </div>
 </template>
 
@@ -35,7 +36,7 @@ export default {
   }
   */
 .hero {
-  background-color: #9c7474dc;
+  background-color: #F6F6F8;
 }
 .circle {
   width: 10em;
@@ -54,5 +55,12 @@ export default {
 .subtitle {
   font-weight: 100;
   word-spacing: 2px;
+}
+
+.button--hero {
+  background: #9A031E;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
 }
 </style>
