@@ -2,6 +2,7 @@
   <div>
     <Nav class="sticky top-0" />
     <HeroSection />
+    <Policies />
     <div class="sm:w-11/12 md:w-4/5 mx-auto">
       <h1 class="m-5 font-bold text-lg">Featured Products</h1>
       <Featured class="mx-auto" :fProducts="featuredProducts" />

@@ -1,25 +1,25 @@
 <template>
   <div
-    class="hero relative h-96 flex flex-col justify-center items-center text-center mx-auto"
+    class="hero relative h-64 flex flex-col justify-center text-center mx-auto"
   >
-    <div class="absolute h-full min-w-full flex top-0 left-48">
-        <img class="absolute left-0 top-0 h-full" src="~/assets/hero.png" alt="" />
+    <div class="absolute top-0 left-0">
+        <img class="w-full max-h-64" src="~/assets/hero.png" alt="" />
     </div>
     <div class="relative">
       <div class="z-10 relative">
-        <h1 class="text-5xl m-3 font-bold md:text-6xl">
+        <h1 class="text-3xl sm:text-5xl m-3 font-bold md:text-6xl">
           Home of African Fashion
         </h1>
         <p class="subtitle">...quality and affordable products</p>
       </div>
     </div>
-    <div class="links mt-10 absolute right-32 bottom-16">
-        <NuxtLink to="/" class="button--hero relative z-10 text-xl">
+    <div class="links absolute right-2 bottom-2">
+        <NuxtLink to="/" class="button--hero relative z-10 text-md rounded flex  flex-row items-center px-3 py-2">
           <span>View Collections</span>
           <span><IconsArrowRightIcon /></span>
         </NuxtLink>
     </div>
-    <div class="circle absolute z-0 right-16 top-16"></div>
+    <div class="circle hidden sm:block sm:absolute z-0 right-16 top-16"></div>
   </div>
 </template>
 
@@ -60,8 +60,5 @@ export default {
 
 .button--hero {
   background: #9A031E;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
 }
 </style>

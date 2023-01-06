@@ -21,10 +21,8 @@ html {
   margin: 0;
 }
 .button--hero {
-  display: inline-block;
   color: #fff;
   text-decoration: none;
-  padding: 10px 30px;
 }
 .button--green {
   display: inline-block;

@@ -8,9 +8,9 @@
         <div
           class="MOBILE-MENU-BAR flex justify-between items-center py-2 w-full shadow-md"
         >
-          <div class="HAMBURGER-ICON space-y-2 px-10" @click="toggleMobileMenu">
+          <div class="HAMBURGER-ICON space-y-1.5 px-10" @click="toggleMobileMenu">
             <span
-              class="block h-0.5 w-8 bg-gray-600"
+              class="block h-0.5 w-6 bg-gray-600"
               :class="[
                 openMobileMenu
                   ? 'transform duration-200 translate-y-2.5 rotate-45'
@@ -18,7 +18,7 @@
               ]"
             ></span>
             <span
-              class="block h-0.5 w-8 bg-gray-600"
+              class="block h-0.5 w-6 bg-gray-600"
               :class="[
                 openMobileMenu
                   ? 'transform duration-500 -translate-x-full opacity-0 ease-in-out'
@@ -26,7 +26,7 @@
               ]"
             ></span>
             <span
-              class="block h-0.5 w-8 bg-gray-600"
+              class="block h-0.5 w-6 bg-gray-600"
               :class="[
                 openMobileMenu
                   ? 'transform duration-200 -translate-y-2.5 -rotate-45 '
