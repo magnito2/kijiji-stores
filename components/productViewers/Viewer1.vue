@@ -1,8 +1,8 @@
 <template>
     <div
-        class="product-viewer flex flex-col shadow-xl m-8 sm:m-2 md:m-4 justify-center items-center sm:items-start sm:flex-row"
+        class="product-viewer flex flex-col shadow-xl justify-center items-center sm:items-start sm:flex-row"
       >
-        <ImageViewersViewer1 :images="product.attributes.Image.data"/>
+        <ImageViewersViewer1 :images="images"/>
         <div class="flex w-full flex-col sm:mr-4">
           <h3 class="m-3 text-2xl">
             {{ product.attributes.name | capitalising }}
@@ -77,6 +77,11 @@
 export default {
     name: 'ProductViewer1',
     props: ['product'],
+    data(){
+      return {
+        images: this.product.attributes.Image.data
+      }
+    },
     filters: {
       capitalising: function (data) {
         var capitalized = []
@@ -87,6 +92,16 @@ export default {
           )
         })
         return capitalized.join(' ')
+      }
+    },
+    methods: {
+      changeImages(value){
+        this.images = value.attributes.Image.data;
+      }
+    },
+    watch: {
+      product(value){
+        this.changeImages(value);
       }
     }
 }

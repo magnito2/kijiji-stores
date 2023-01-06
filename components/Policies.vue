@@ -64,7 +64,7 @@ export default {
 </script>
 <style scoped>
 .policy {
-    @apply flex-col min-w-full
+    @apply flex-col min-w-full border border-gray-300 p-4 rounded-lg
 }
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s;

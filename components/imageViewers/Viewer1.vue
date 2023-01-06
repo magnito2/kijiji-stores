@@ -25,11 +25,8 @@ export default {
     name: 'ImageViewer1',
     props: ['images', 'offer'],
     data(){
-        const urls = this.images.map(image => image.attributes.url);
-        const [featureImage, ...otherImages] = urls;
         return {
-            featureImage,
-            urls
+            featureIdx: 0
         }
     },
     methods: {
@@ -38,6 +35,25 @@ export default {
         },
         setCurrentImage(url){
             this.featureImage = url;
+        }
+    },
+    computed: {
+        urls(){
+            return this.images.map(image => image.attributes.url);
+        },
+        featureImage: {
+            get(){
+                return this.urls[this.featureIdx];
+            },
+            set(url){
+                const idx = this.urls.findIndex(el => url == el)
+                this.featureIdx = idx;
+            }
+        }
+    },
+    watch: {
+        images(val){
+            this.featureIdx = 0;
         }
     }
 }
