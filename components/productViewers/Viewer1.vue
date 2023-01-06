@@ -1,9 +1,9 @@
 <template>
     <div
-        class="flex flex-col shadow-xl m-8 sm:m-2 md:m-4 justify-center items-center"
+        class="product-viewer flex flex-col shadow-xl m-8 sm:m-2 md:m-4 justify-center items-center sm:items-start sm:flex-row"
       >
         <ImageViewersViewer1 :images="product.attributes.Image.data"/>
-        <div class="flex w-full flex-col">
+        <div class="flex w-full flex-col sm:mr-4">
           <h3 class="m-3 text-2xl">
             {{ product.attributes.name | capitalising }}
           </h3>
@@ -92,5 +92,7 @@ export default {
 }
 </script>
 <style scoped>
-    
+.product-price {
+  font-family: 'Comfortaa', cursive;;
+}
 </style>

@@ -37,6 +37,7 @@ export default {
   */
 .hero {
   background-color: #F6F6F8;
+  font-family: 'Inter', sans-serif;
 }
 .circle {
   width: 10em;

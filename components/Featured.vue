@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div class="sm:grid sm:grid-cols-3 md:grid-cols-3 gap-6 justify-center items-center">
-      <template v-for="(product, i) in fProducts">
-        <ProductViewersViewer1 :product="product" />
-      </template>
+    <div class="flex justify-center items-center">
+        <ProductViewersViewer1 :product="currProduct" />
     </div>
   </div>
 </template>
@@ -12,6 +10,16 @@
 export default {
   name: "Featured",
   props: ["fProducts"],
+  data(){
+    return {
+      currIndex: 0,
+    }
+  },
+  computed: {
+    currProduct(){
+      return this.fProducts[this.currIndex];
+    }
+  }
 };
 </script>
 
